@@ -1,0 +1,15 @@
+services:
+  webapplicationcrud:
+    build:
+      context: D:\AZURE_PYS\DOCKER-ASP-MSSQL\WebApplicationCRUD
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: webapplicationcrud
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Salome\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'
